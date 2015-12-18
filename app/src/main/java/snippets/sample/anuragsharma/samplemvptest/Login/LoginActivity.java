@@ -15,6 +15,8 @@ import snippets.sample.anuragsharma.samplemvptest.R;
 
 /**
  * A login screen that offers login via email/password.
+ * Login activity do not know about the buisness logic and backend data.
+ * We will handle only view transitions (Navigation) from it
  */
 public class LoginActivity extends AppCompatActivity implements ILoginView {
 

@@ -7,6 +7,9 @@ import snippets.sample.anuragsharma.samplemvptest.Login.Interface.ILoginPresente
 
 /**
  * Created by anuragsharma on 12/18/15.
+ * Login Presenter
+ * It will pass data to interactor from the Login view. Interactor response will either be success or error callback
+ * Eventually calling respective success or failure methods in Login view or activity
  */
 public class LoginPresenter implements ILoginPresenter, ILoginListener {
 

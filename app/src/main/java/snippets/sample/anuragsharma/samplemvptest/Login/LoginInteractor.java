@@ -7,6 +7,9 @@ import snippets.sample.anuragsharma.samplemvptest.Login.Interface.ILoginListener
 
 /**
  * Created by anuragsharma on 12/18/15.
+ * Login Interactor
+ * To provide buisness logic for Login view. In this case, we are faking authentication from server using
+ * two seconds delay.
  */
 public class LoginInteractor implements ILoginInteractor {
 
