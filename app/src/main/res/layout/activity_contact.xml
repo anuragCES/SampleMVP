@@ -4,15 +4,28 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#e2e4fe">
 
     <ListView
         android:id="@+id/contact_listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"
         android:divider="@null"
         android:dividerHeight="10dp" />
+
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="@dimen/round_button_diameter"
+        android:layout_height="@dimen/round_button_diameter"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="@dimen/add_button_margin"
+        android:layout_marginEnd="@dimen/add_button_margin_end"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
+        android:background="@drawable/oval"
+        android:elevation="@dimen/elevation_low"
+        android:onClick="addContact"/>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package snippets.sample.anuragsharma.samplemvptest;
+package snippets.sample.mvp.samplemvptest;
 
 import org.junit.Test;
 

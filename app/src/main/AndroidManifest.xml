@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="snippets.sample.anuragsharma.samplemvptest" >
+    package="snippets.sample.mvp.samplemvptest" >
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -23,9 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="snippets.sample.anuragsharma.Contact.ContactActivity"
+            android:name="snippets.sample.mvp.Contact.ContactActivity"
             android:label="@string/title_activity_contact"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name="snippets.sample.mvp.AddContact.AddContactActivity" >
         </activity>
     </application>
 
