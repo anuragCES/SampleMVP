@@ -29,7 +29,6 @@ public class ContactInteractor implements IContactInteractor {
         ArrayList contact = new ArrayList<Contact>();
         try {
             JSONArray contactsJson = new JSONArray(contactsJsonString);
-            Log.d(TAG, "" + contactsJson.length());
             for(int i = 0 ;  i < contactsJson.length() ; i ++){
                 JSONObject contactJsonObject = contactsJson.getJSONObject(i);
                 contact.add(new Contact("Contact "+contactJsonObject.get("givenName").toString(), "Phone No "+contactJsonObject.get("tel").toString()));
@@ -46,4 +45,6 @@ public class ContactInteractor implements IContactInteractor {
             callback.onFailure();
         }
     }
+
+
 }

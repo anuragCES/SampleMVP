@@ -31,7 +31,7 @@ public class ContactPresenter implements IContactPresenter, IContactListLoadCall
 
     @Override
     public void getContactArrayAdapter(){
-        interactor.populateContactList(this, jsonUtility.loadJSONFromAsset(view));
+        interactor.populateContactList(this, jsonUtility.readFromJSONFile(view));
     }
 
     public void setArrayAdapter(ContactArrayAdapter contactArrayAdapter, ArrayList<Contact> contacts){

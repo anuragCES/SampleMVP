@@ -1,11 +1,17 @@
 package snippets.sample.mvp.Contact;
 
+import android.content.ClipData;
+import android.content.ClipDescription;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.DragEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import snippets.sample.mvp.AddContact.AddContactActivity;
@@ -19,6 +25,7 @@ public class ContactActivity extends AppCompatActivity implements IContactActivi
     private ContactArrayAdapter contactArrayAdapter;
     private ContactPresenter contactPresenter;
     private String TAG = "Contact Activity";
+    private android.widget.RelativeLayout.LayoutParams layoutParams;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

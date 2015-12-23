@@ -16,12 +16,12 @@ public class LoginInteractor implements ILoginInteractor {
     public LoginInteractor(){}
 
     @Override
-    public boolean validatedCredentials(final ILoginListener callback, final String username, final String password) {
+    public void validatedCredentials(final ILoginListener callback, final String username, final String password) {
         // Mock Login : Let's fake the server call to have delay in response
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(username.equals("test@mvp.com") && password.equals("test")){
+                if(isCredentialValid(username, password)){
                     callback.onSuccess();
                 }
                 else{
@@ -30,7 +30,15 @@ public class LoginInteractor implements ILoginInteractor {
             }
         }, 2000);
 
+    }
 
-        return false;
+    @Override
+    public boolean isCredentialValid(final String username, final String password){
+        if(username.equals("test@mvp.com") && password.equals("test")){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

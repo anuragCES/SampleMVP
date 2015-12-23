@@ -2,11 +2,15 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e2e4fe">
-
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/clayout">
     <ListView
         android:id="@+id/contact_listView"
         android:layout_width="match_parent"
@@ -15,17 +19,30 @@
         android:cacheColorHint="@android:color/transparent"
         android:divider="@null"
         android:dividerHeight="10dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="70dp"
+            android:layout_marginRight="70dp"
+            android:src="@android:drawable/ic_input_add"
+            app:rippleColor="@android:color/holo_red_dark"
+            app:fabSize="normal"
+            app:borderWidth="0dp"
+            android:onClick="addContact"/>
 
-    <ImageButton
-        android:id="@+id/add_button"
-        android:layout_width="@dimen/round_button_diameter"
-        android:layout_height="@dimen/round_button_diameter"
-        android:layout_gravity="end|bottom"
-        android:layout_marginTop="@dimen/add_button_margin"
-        android:layout_marginEnd="@dimen/add_button_margin_end"
-        android:src="@android:drawable/ic_input_add"
-        android:tint="@android:color/white"
-        android:background="@drawable/oval"
-        android:elevation="@dimen/elevation_low"
-        android:onClick="addContact"/>
+    </android.support.design.widget.CoordinatorLayout>
+    <!--<ImageButton-->
+        <!--android:id="@+id/add_button"-->
+        <!--android:layout_width="@dimen/round_button_diameter"-->
+        <!--android:layout_height="@dimen/round_button_diameter"-->
+        <!--android:layout_gravity="end|bottom"-->
+        <!--android:layout_marginTop="@dimen/add_button_margin"-->
+        <!--android:layout_marginEnd="@dimen/add_button_margin_end"-->
+        <!--android:src="@android:drawable/ic_input_add"-->
+        <!--android:tint="@android:color/white"-->
+        <!--android:background="@drawable/oval"-->
+        <!--android:elevation="@dimen/elevation_low"-->
+        <!--android:onClick="addContact"/>-->
 </LinearLayout>

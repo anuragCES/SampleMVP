@@ -1,4 +1,4 @@
-package snippets.sample.mvp.samplemvptest;
+package snippets.sample.mvp.Contact;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

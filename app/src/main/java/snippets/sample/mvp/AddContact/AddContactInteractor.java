@@ -42,18 +42,11 @@ public class AddContactInteractor implements IAddContactInteractor {
             newContact.put(EMAIL, email);
             newContact.put(PHONENUMBER, phoneNumber);
             contacts.put(newContact);
-            Log.d("Add Contact interactor", contacts.toString());
-            jsonUtility.writeJSONToAsset(context, contacts.toString());
+            jsonUtility.writeToFile(contacts.toString(), context);
+            addContactCallback.addContactSuccessCallback();
         } catch (JSONException e) {
             e.printStackTrace();
+            addContactCallback.addCallbackFailureCallback();
         }
-
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                addContactCallback.addContactSuccessCallback();
-            }
-        }, 2000);
     }
 }
